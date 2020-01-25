@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-from operator import attrgetter
 import requests
 
 
