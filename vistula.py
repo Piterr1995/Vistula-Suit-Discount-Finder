@@ -4,13 +4,15 @@ import requests
 
 result_vistula = requests.get("https://vistula.pl/garnitury")
 
+#getting a content of a webpage
 src_vistula = result_vistula.content
 
 soup = BeautifulSoup(src_vistula, features="lxml")
 
+#finding an element that contains all the data that we need
 suits_vistula = soup.find_all("li", class_="picture_on_list js--picture-hover")
 
-
+#creating an empty dictionary with a "suits" key, which contains an empty list 
 dict_vistula = {}
 dict_vistula['suits'] = []
 
